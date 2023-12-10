@@ -1,0 +1,220 @@
+* { 
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Crimson Pro', serif
+}
+html {
+    font-size: 1rem;
+    height: 100%;
+}
+body,
+header,
+main,
+footer {
+    min-height: 50px;
+    min-width: 400px;
+}
+body {
+    background-color:rgb(238, 233, 218);
+    font-family: Raleway, sans-serif;
+}
+.header {
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    margin-top: 0%;
+    margin: 0 0, 5rem 0;
+    height: 15%;
+    z-index: 300;
+    background-image: linear-gradient(rgb(147, 191, 207), rgb(189, 205, 214) )
+
+    
+}
+.header-logo {
+    width: 15%;
+    display: inline-block;
+    margin: 0.5rem;
+    padding-left: 1rem;
+}
+.header-logo img {
+    width: 100%;
+    }
+.header-menubar {
+    position: relative;
+    top: auto;
+    width: 70%;
+    display: inline-block;
+    margin: 0.5rem 0 0 0.5rem;
+    font-size: 2rem;
+    }
+.header-menubar ul {
+    list-style: none;
+}
+.header-menubar li {
+    float:left;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 1rem 0;
+    padding: 0 0.5rem 0;
+}
+.header-menubar a {
+    text-decoration: none;
+    color: #FFFFFF
+}
+.header-menubar a:hover {
+    color: #6096B4;
+}
+
+.main {
+    overflow: auto;
+    background-color: rgb(238, 233, 218);
+}
+.main img {
+    width: 100%;
+    margin-top: 7.2%
+}
+footer {
+    background-image: linear-gradient(rgb(147, 191, 207), rgb(189, 205, 214) )
+}
+.nota {
+    justify-content: center;
+}
+.nota a {
+    text-decoration: none;
+}
+.nota h3 {
+    display: flex;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #644e43;
+    justify-content: center;
+}
+.nota p {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #666;
+    line-height: 2rem;
+}
+/*GRID*/
+.parent {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+.header {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}
+.nota {
+    font-size: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}    
+.footer .f_principal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.f_principal ul {
+    list-style: none;
+}
+.f_principal li {
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 1rem 0;
+    padding: 0 0.5rem 0;
+}
+.f_principal a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+}
+.f_principal a:hover {
+    color: #6096B4;
+    font-size: 1.5rem
+}
+.Onediss {
+    display: flex;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    .header-menubar {
+        font-size: 1.5rem; 
+    }
+    .nota h3 {
+        font-size: 2rem;
+    }
+    .nota p {
+        font-size: 1rem; 
+    }
+    .header {
+        display:flex;
+        justify-content:space-evenly;
+    }
+    .header-menubar li {
+        float:none;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+        font-size:1.3rem;
+    }
+    .main .uno {
+        margin-top: 20%;
+    }
+    .header-logo {
+        width: 20%;
+        display: inline-block;
+        margin: 0.5rem;
+        padding-left: 1rem;
+    }
+    .footer .f_principal {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+       .f_principal li {
+        float: left;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;       
+    }
+    .f_principal a {        
+        padding-left: 0,5rem;
+        font-size: 0.8rem;
+    }
+    .f_principal a:hover {
+        font-size: 1.5rem
+    }
+}
+@media screen and (max-width: 700px) {
+    .header-menubar {
+        font-size: 1.5rem; 
+    }
+    .main .uno {
+        margin-top: 7rem;
+    }
+}
+.header-logo {
+    width: 20%;
+    display: inline-block;
+    margin: 0.5rem;
+    padding-left: 1rem;
+}

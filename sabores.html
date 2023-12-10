@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">    
+    <link rel="stylesheet" href="./css/style_sabores.css">
+    <script src="https://kit.fontawesome.com/f17c74b586.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+
+    <link rel="shortcut icon" href="./imagenes/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Pierrot Sabores</title>
+</head>
+
+
+<body class="parent">
+    <header class="header">
+        <div class="header-logo animate__animated animate__heartBeat"> <a href="./index.html"> <img src="./imagenes/Pierrot Logo 2.png" alt="logo"></a></div>
+        <nav class="header-menubar">
+            <ul>
+                <li> <a href="index.html">Inicio</a></li>
+                <li> <a href="sabores.html">Sabores</a></li>
+                <li> <a href="nosotros.html">Nuestra Historia</a></li>
+                <li> <a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main sabores">
+        <div class="helados">
+            <div class="dulces lista">
+                <h3>Dulces placeres</h3>
+                <ul>
+                    <li>Dulce De Leche</li>
+                    <li>DDL Granizado</li>
+                    <li>DDL con nuez</li>
+                    <li>Súper DDL</li>
+
+                </ul>
+
+            </div>
+            <div class="cremas lista">
+                <h3>Cremas soñadas</h3>
+                <ul>
+                    <li>Pistacho</li>
+                    <li>Crema del cielo</li>
+                    <li>Chocolate con almendras</li>
+                    <li>Vainilla</li>
+                    <li>Americana</li>
+                    <li>Tramontana</li>
+                    <li>Almendrado</li>
+                    <li>Dulce De Leche</li>
+                    <li>DDL Granizado</li>
+                    <li>DDL con nuez</li>
+                    <li>Súper DDL</li>
+
+                </ul>
+            </div>
+            <div class="frutas lista">
+                <h3>Frutales</h3>
+                <ul>
+                    <li>Limón</li>
+                    <li>Frutilla</li>
+                    <li>Durazno</li>
+                    <li>Banana Split</li>
+                    <li>Kiwi y frutilla</li>
+                    <li>Ananá</li>
+
+                </ul>
+            </div>
+            <div class="chocos lista">
+                <h3>Chocolates perfectos</h3>
+                <ul>
+                    <li>Chocolate </li>
+                    <li>Chocolate blanco</li>
+                    <li>Chocolate con almendras</li>
+                    <li>Chocolate granizado</li>
+                    <li>Chocolate granizado blanco</li>
+                    <li>Chocolate con frutos rojos</li>
+                    <li>Chocolate con nuez</li>
+
+                </ul>
+            </div>
+            <div class="recomienda lista">
+                <h3>Recomendamos</h3>
+                <ul>
+                    <li>
+                        <a title="Americana con frutilla y salsa de chocolate">Crema Pierrot
+                        </a>
+                    </li>
+
+                    <li>
+                        <a title="Flan con crema y ddl">Flan completo
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Helado de Mantecol">Crema Mantecol
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Alfajor Havanna con mucho DDL">Alfajor
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Americana con 3 tipos de chocolate Milka">Milka
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="recetas">
+            <h1>Porque no todo en la vida son los postres...</h1>
+            <p>Acá de dejamos recetas al azar para que te tientes y combines nuestros postres con unna exquisita comida!!!
+                </p>
+                <div class="api_container">
+                <button onclick="traeRecetas()">Ideas para preparar</button>
+                </div>
+                <div id="contenido">
+    
+                </div>
+        </div>
+        <div class="postres">
+            <div class="variedad1">
+                <div class="ficha">
+                    <div>
+                        <img src="../imagenes/carritoFrente.jpg" alt="carrito">
+                    </div>
+                    <div>
+                        <h3>EVENTOS Y FESTEJOS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="variedad2">
+                <div class="ficha">
+                    <div>
+                        <img src="./imagenes/bochaChocolateMarroc.jpg" alt="bocha helado">
+                    </div>
+                    <div>
+                        <h3>LOS MÁS RICOS HELADOS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="variedad3">
+                <div class="ficha">
+                    <div>
+                        <img src="./imagenes/bombones.jpg" alt="bombones">
+                    </div>
+                    <div>
+                        <h3>BOMBONES </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="variedad4">
+                <div class="ficha">
+                    <div>
+                        <img src="./imagenes/header01.jpg" alt="helados">
+                    </div>
+                    <div>
+                        <h3>PARA DISFRUTAR</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="variedad5">
+                <div class="ficha">
+                    <div>
+                        <img src="./imagenes/sabores.jpg" alt="helados">
+                    </div>
+                    <div>
+                        <h3>ANTOJOS DULCES</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="variedad6">
+                <div class="ficha">
+                    <div>
+                        <img src="./imagenes/nenes.jpg" alt="chicos y helado">
+                    </div>
+                    <div>
+                        <h3>CRECIENDO JUNTOS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="variedad7">
+                <div class="ficha">
+                    <div>
+                        <img src="./imagenes/sirviendo.jpg" alt="sirviendo helado">
+                    </div>
+                    <div>
+                        <h3>EXCELENTES PRODUCTOS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="variedad8">
+                <div class="ficha">
+                    <div>
+                        <img src="./imagenes/torreChocolate.jpg" alt="chocolate">
+                    </div>
+                    <div>
+                        <h3>ANTOJITOS</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="paletas"></div>
+        <div class="sabores"></div> -->
+
+    </main>
+    <footer class="footer">
+        <div class="f_principal">
+            <div class="header-logo"> <a href="index.html"> <img src="./imagenes/Pierrot Logo 2.png" alt="logo"></a></div>
+            <div></div>
+            <div class="redes">
+                <ul>
+                    <li><a href="https://www.instagram.com/pierrottotoras/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    <li><a href="https://m.facebook.com/ChocolatesYHeladosPierrot" target="_blank"><i class="fa-brands fa-square-facebook fa-xl"></i></a></li>
+                    <li ><a href="mailto:accettananci@hotmail.com" ><i class="fa-regular fa-envelope fa-xl"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+                    <li><a href="tel:+03476461178"><i class="fa-solid fa-phone fa-xl"></i></i></i></a></li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="Onediss">
+            Desarrollado por OnedissDev 2023 
+        </div>
+
+    </footer>
+    <script src="./js/api.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+.nosotros {
+    display: flex;
+    background-color: rgb(238, 233, 218);
+    color: rgb(56, 26, 4);
+    }
+.secciones {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.nosotros p {    
+    width: 100%;   
+    padding: 3rem;
+    line-height: 2.3rem;
+    font-size: 1.8rem;
+}
+.secciones img {
+    width: 100%;
+    border-radius: 10px;  
+}
+.historia {
+    height: 30%;
+    width: 100%;
+    padding: 2rem;
+}
+.article1 {
+    padding-top: 5rem;
+    font-size: 1.5rem;
+}
+.article1 h3 {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+.historia img {
+    width: 100%;
+    min-height: 300px;
+    border-radius: 10px;
+}
+.aside {
+    font-size: 2rem;
+    text-align: center;
+    padding: 6rem;  
+}
+.aside p {    
+    width: 100%;   
+    padding: 3rem;
+}
+.aside img {
+    width: 100%;
+    border-radius: 10px;
+    
+}

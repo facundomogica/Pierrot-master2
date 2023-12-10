@@ -1,0 +1,241 @@
+.helados {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "dulces cremas frutas"
+        "chocos cremas recomienda";
+    gap: 1rem;
+    padding-top: 8rem;
+    justify-content: space-around;
+    background-color: rgb(238, 233, 218);
+    border-radius: 5px;
+
+}
+
+.dulces {
+    grid-area: dulces;
+}
+
+.cremas {
+    grid-area: cremas;
+}
+
+.frutas {
+    grid-area: frutas;
+}
+
+.chocos {
+    grid-area: chocos;
+}
+
+.recomienda {
+    grid-area: recomienda;
+}
+
+.sabores {
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(238, 233, 218);
+}
+
+.helados h3 {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #644e43;
+    justify-content: center;
+}
+
+.helados li {
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1, 5rem;
+    line-height: 1rem;
+
+}
+
+.recetas {
+    min-height: 3rem;
+    justify-content: center;
+    margin: 3rem;
+    border: 1px #6096B4 solid;
+    border-radius: 10px;
+    background-color: rgb(189, 205, 214);
+    box-shadow: 4px 4px 8px #644e43;
+}
+
+.recetas h1 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+#contenido {
+    display: flex;
+
+}
+
+.recetas h2 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.recetas p {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.recetas img {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 10px;
+    border: 1px #644e43 solid;
+}
+
+.api_container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.recetas button {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    min-height: 3rem;
+    align-items: center;
+    min-width: 10rem;
+}
+
+.recetas button:hover {
+    background-color: #6096B4;
+}
+
+#contenido {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "titulo titulo titulo"
+        "foto instrucciones instrucciones";
+
+}
+
+#contenido p {
+    line-height: 2rem;
+}
+
+.foto {
+    grid-area: "foto";
+}
+
+.instrucciones {
+    grid-area: "receta";
+}
+
+
+
+.postres {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 18px;
+    grid-template-areas:
+        "variedad1 variedad2"
+        "variedad3 variedad4"
+        "variedad5 variedad6"
+        "variedad7 variedad8";
+    background-color: #EEE9DA;
+    padding-top: 0%;
+
+}
+
+.ficha {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.ficha img {
+    height: 350px;
+    border-radius: 15px;
+}
+
+@media (max-width: 767px) {
+    .helados {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "recomienda"
+            "dulces"
+            "cremas"
+            "chocos"
+            "frutas";
+
+    }
+
+    .postres {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+
+        grid-template-areas:
+            "variedad1" "variedad2"
+            "variedad3" "variedad4"
+            "variedad5" "variedad6"
+            "variedad7" "variedad8";
+
+        margin-top: 10%;
+
+    }
+
+    #contenido {
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "titulo"
+            "foto"
+            "instrucciones";
+
+    }
+
+    #contenido img {
+        max-width: 90%;
+
+
+    }
+
+
+    #contenido p {
+        line-height: 2rem;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .helados {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "recomienda dulces"
+            "cremas chocos"
+            "frutas chocos";
+
+    }
+
+}
