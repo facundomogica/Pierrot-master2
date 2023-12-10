@@ -114,9 +114,9 @@
                 <td>{{ contacto.nombre }}</td>
                 <td>{{ contacto.apellido }}</td>
                 <td>{{ contacto.consulta }}</td>
-                <td><button id="boton-modificar" style="margin-right: 50px;" @click="obtenercontactos2(contacto.codigo)">Modificar</button><!-- <span style="margin-right: 10px;"></span> --></td>
+                <td><button class="td-with-buttons" id="boton-modificar" style="margin-right: 50px;" @click="obtenercontactos2(contacto.codigo)">Modificar</button><!-- <span style="margin-right: 10px;"></span> --></td>
 
-                <td><button id="boton-eliminar" style="margin-right: 50px;" @click="eliminarcontacto(contacto.codigo)">Eliminar</button><!-- <span style="margin-right: 10px;"></span> --></td>
+                <td><button class="td-with-buttons" id="boton-eliminar" style="margin-right: 50px;" @click="eliminarcontacto(contacto.codigo)">Eliminar</button><!-- <span style="margin-right: 10px;"></span> --></td>
                 
             </tr>
         </tbody>

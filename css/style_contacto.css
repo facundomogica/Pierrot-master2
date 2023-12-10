@@ -85,4 +85,26 @@
   #BuscarPorDni tr:hover {
     background-color: #e0e0e0; /* Color de fondo gris más claro al pasar el ratón */
   }
+  /* Estilos para las celdas de datos (td) con botones */
+.td-with-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilo para los botones dentro de las celdas */
+  .td-with-buttons button {
+    padding: 8px 12px;
+    background-color: #4CAF50; /* Color de fondo verde para los botones */
+    color: #fff; /* Color del texto en los botones */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Efecto al pasar el ratón sobre los botones */
+  .td-with-buttons button:hover {
+    background-color: #45a049; /* Cambiar color de fondo al pasar el ratón */
+  }
   
