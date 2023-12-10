@@ -18,3 +18,71 @@
     display: flex;
     justify-content: space-between;
 }
+#boton-eliminar {
+    padding: 10px 15px;
+    background-color: #ff5733; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+  /* Efecto al pasar el ratón sobre el botón */
+#boton-eliminar:hover {
+    background-color: #ff3d00; /* Cambiar color de fondo al pasar el ratón */
+}
+  /* Efecto al hacer clic en el botón */
+#boton-eliminar:active {
+    background-color: #e64a19; /* Cambiar color de fondo al hacer clic */
+}
+
+/* Estilos base para el botón de modificar */
+#boton-modificar {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+  /* Efecto al pasar el ratón sobre el botón */
+#boton-modificar:hover {
+    background-color: #45a049; /* Cambiar color de fondo al pasar el ratón */
+}
+  /* Efecto al hacer clic en el botón */
+#boton-modificar:active {
+    background-color: #3e8744; /* Cambiar color de fondo al hacer clic */
+}
+/* Estilos generales para la tabla */
+#BuscarPorDni {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para las celdas encabezado (th) */
+  #BuscarPorDni th {
+    background-color: #6096B4;
+    color: #fff; /* Color del texto en las celdas encabezado */
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Estilos para las celdas de datos (td) */
+  #BuscarPorDni td {
+    border: 1px solid #ddd; /* Borde delgado entre las celdas */
+    padding: 12px;
+  }
+  
+  /* Estilos alternados para las filas */
+  #BuscarPorDni tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo gris claro para filas pares */
+  }
+  
+  /* Estilo al pasar el ratón sobre una fila */
+  #BuscarPorDni tr:hover {
+    background-color: #e0e0e0; /* Color de fondo gris más claro al pasar el ratón */
+  }
+  

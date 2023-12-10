@@ -114,9 +114,9 @@
                 <td>{{ contacto.nombre }}</td>
                 <td>{{ contacto.apellido }}</td>
                 <td>{{ contacto.consulta }}</td>
-                <td><button style="margin-right: 50px;" @click="obtenercontactos2(contacto.codigo)">Modificar</button><span style="margin-right: 10px;"></span></td>
+                <td><button id="boton-modificar" style="margin-right: 50px;" @click="obtenercontactos2(contacto.codigo)">Modificar</button><!-- <span style="margin-right: 10px;"></span> --></td>
 
-                <td><button style="margin-right: 50px;" @click="eliminarcontacto(contacto.codigo)">Eliminar</button><span style="margin-right: 10px;"></span></td>
+                <td><button id="boton-eliminar" style="margin-right: 50px;" @click="eliminarcontacto(contacto.codigo)">Eliminar</button><!-- <span style="margin-right: 10px;"></span> --></td>
                 
             </tr>
         </tbody>
@@ -125,28 +125,29 @@
         <h2>Datos de la consulta</h2>
         <form @submit.prevent="guardarCambios">
             
-            <label for="DNIModificar">DNI:</label>
+            <label  class="form-label" for="DNIModificar">DNI:</label>
             <input type="text" id="DNIModificar" v-model="DNI" required><br>
             
-            <label for="nombreModificar">Nombre:</label>
+            <label  class="form-label" for="nombreModificar">Nombre:</label>
             <input type="text" id="nombreModificar" v-model="nombre" required><br>
 
-            <label for="apellidoModificar">Apellido:</label>
+            <label  class="form-label" for="apellidoModificar">Apellido:</label>
             <input type="text" id="apellidoModificar" v-model="apellido" required><br>
 
-            <label for="mailModificar">Mail:</label>
+            <label  class="form-label" for="mailModificar">Mail:</label>
             <input type="email" id="mailModificar" v-model="mail" required><br>
 
-            <label for="telefonoModificar">Teléfono:</label>
+            <label  class="form-label" for="telefonoModificar">Teléfono:</label>
             <input type="tel" id="telefonoModificar" v-model="telefono" required><br>
 
 
-            <label for="ConsultaModificar">Consulta:</label>
+            <label  class="form-label"  for="ConsultaModificar">Consulta:</label>
             <input type="text" id="ConsultaModificar" v-model="consulta" required><br>
 
 
             <button type="submit">Guardar Cambios</button>
-            <a href="contacto.html">Cancelar</a>
+            <button @click="cancelar()" type="submit">Cancelar</button>
+            
         </form>
 
 </main>
@@ -332,6 +333,10 @@
                     this.telefono = '';
                     this.DNI = '';
                     this.mostrarDatosAmigo = false;
+                },
+                cancelar(){
+                    this.mostrarDatosAmigo = false;
+                    return;
                 }
         },
                 
