@@ -33,19 +33,28 @@
         <div class="helados">
             <div class="dulces lista">
                 <h3>Dulces placeres</h3>
-                <ul>
-                    <li>Dulce De Leche</li>
+                <ul id="Dulcesplaceres">
+                    <div v-for="helado in helados" >
+                        <li  v-if="helado.categoria==='Dulces placeres'">{{ helado.gusto }}
+                        <button class="td-with-buttons" id="boton-eliminar" style="margin-right: 50px;" @click="eliminarhelado(helado.codigo)">X</button></li>
+                    </div>
+                   <!--  <li>Dulce De Leche</li>
                     <li>DDL Granizado</li>
                     <li>DDL con nuez</li>
-                    <li>Súper DDL</li>
+                    <li>Súper DDL</li> -->
 
                 </ul>
 
             </div>
             <div class="cremas lista">
                 <h3>Cremas soñadas</h3>
-                <ul>
-                    <li>Pistacho</li>
+                <ul id="Cremassoñadas">
+                    <div v-for="helado in helados" >
+                        <li  v-if="helado.categoria==='Cremas soniadas'">{{ helado.gusto }}
+                        <button class="td-with-buttons" id="boton-eliminar" style="margin-right: 50px;" @click="eliminarhelado(helado.codigo)">X</button></li>
+                    </div>
+
+                    <!-- <li>Pistacho</li>
                     <li>Crema del cielo</li>
                     <li>Chocolate con almendras</li>
                     <li>Vainilla</li>
@@ -55,33 +64,53 @@
                     <li>Dulce De Leche</li>
                     <li>DDL Granizado</li>
                     <li>DDL con nuez</li>
-                    <li>Súper DDL</li>
+                    <li>Súper DDL</li> -->
 
                 </ul>
             </div>
+            <!-- <table class="cremas lista" id="Cremassoñadas">
+                <thead>
+                    <tr>
+                        <th>Cremas soñadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="helado in helados">
+                        <td>{{ helado.gusto }}</td>
+                    </tr>
+                </tbody>
+            </table> -->
             <div class="frutas lista">
                 <h3>Frutales</h3>
-                <ul>
-                    <li>Limón</li>
+                <ul id="Cremassoñadas">
+                    <div v-for="helado in helados" >
+                        <li  v-if="helado.categoria==='Frutales'">{{ helado.gusto }}
+                        <button class="td-with-buttons" id="boton-eliminar" style="margin-right: 50px;" @click="eliminarhelado(helado.codigo)">X</button></li>
+                    </div>
+                   <!--  <li>Limón</li>
                     <li>Frutilla</li>
                     <li>Durazno</li>
                     <li>Banana Split</li>
                     <li>Kiwi y frutilla</li>
-                    <li>Ananá</li>
+                    <li>Ananá</li> -->
 
                 </ul>
             </div>
             <div class="chocos lista">
                 <h3>Chocolates perfectos</h3>
-                <ul>
-                    <li>Chocolate </li>
+                <ul id="Cremassoñadas">
+                    <div v-for="helado in helados" >
+                        <li  v-if="helado.categoria==='Chocolates perfectos'">{{ helado.gusto }}
+                        <button class="td-with-buttons" id="boton-eliminar" style="margin-right: 50px;" @click="eliminarhelado(helado.codigo)">X</button></li>
+                    </div>
+                    <!-- <li>Chocolate </li>
                     <li>Chocolate blanco</li>
                     <li>Chocolate con almendras</li>
                     <li>Chocolate granizado</li>
                     <li>Chocolate granizado blanco</li>
                     <li>Chocolate con frutos rojos</li>
                     <li>Chocolate con nuez</li>
-
+ -->
                 </ul>
             </div>
             <div class="recomienda lista">
@@ -111,6 +140,7 @@
                 </ul>
             </div>
         </div>
+        <button class="td-with-buttons" id="boton-modificar" style="margin-right: 50px;">Agregar Gusto</button>
         <div class="recetas">
             <h1>Porque no todo en la vida son los postres...</h1>
             <p>Acá de dejamos recetas al azar para que te tientes y combines nuestros postres con unna exquisita comida!!!
@@ -231,6 +261,56 @@
 
     </footer>
     <script src="./js/api.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+
+        const app = Vue.createApp({
+            data() {
+                return {
+                    helados: []
+                }
+            },
+            methods: {
+                obtenerProductos() {
+                    // Obtenemos el contenido del inventario
+                    fetch(URL + 'helados')
+                        .then(response => {
+                             // Parseamos la respuesta JSON 
+                            if (response.ok) { return response.json();}
+                        })
+                        .then(data => {
+                            // El código Vue itera este elemento para generar la tabla
+                            this.helados = data;
+                        })
+                        .catch(error => {
+                            console.log('Error:', error);
+                            alert('Error al obtener los helados.');
+                        });
+                },
+                eliminarhelado(codigo) {
+                    if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+                        fetch(URL + `helados/${codigo}`, { method: 'DELETE' })
+                            .then(response => {
+                                if (response.ok) {
+                                    this.helados = this.helados.filter(helado => helados.codigo !== codigo);
+                                    alert('Helado eliminado correctamente.');
+                                }
+                            })
+                            .catch(error => {
+                                alert(error.message);
+                            });
+                    }
+                }
+            },
+            mounted() {
+                //Al cargar la página, obtenemos la lista de productos
+                this.obtenerProductos();
+            }
+        });
+
+        app.mount('body');
+    </script>
 </body>
 
 </html>

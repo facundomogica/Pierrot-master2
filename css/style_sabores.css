@@ -239,3 +239,21 @@
     }
 
 }
+#boton-eliminar {
+    padding: 2px 4px;
+    background-color: #ff5733; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+  /* Efecto al pasar el ratón sobre el botón */
+#boton-eliminar:hover {
+    background-color: #ff3d00; /* Cambiar color de fondo al pasar el ratón */
+}
+  /* Efecto al hacer clic en el botón */
+#boton-eliminar:active {
+    background-color: #e64a19; /* Cambiar color de fondo al hacer clic */
+}
